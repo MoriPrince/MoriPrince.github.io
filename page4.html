@@ -23,7 +23,7 @@
         }
 
         .banner {
-            width: 100vw;
+            width: 100%;
             height: calc(100vh - 56px);
             background-image: url(pic/草地.jpg);
             background-size: cover;
@@ -44,7 +44,6 @@
             width: 100%;
             height: 100vh;
             z-index: -1;
-
         }
 
         .mountainbtm {
@@ -56,17 +55,6 @@
             width: 100%;
             height: 100vh;
             z-index: -1;
-        }
-
-        @media (max-width: 992px) {
-
-            .sticky-top {
-                position: fixed;
-                top: 0;
-                right: 0;
-                left: 0;
-                z-index: 1020;
-            }
         }
 
         .title {
@@ -151,7 +139,7 @@
             margin-top: 4vh;
             color: white;
         }
-           
+
 
 
         .content_text {
@@ -176,13 +164,18 @@
         }
 
         .textcolor {
-            text-shadow: 0.4px 0.4px white;
+            color: white;
+            text-shadow: 0.5px 0.5px black;
         }
 
         .footer {
             background-color: #000000;
             color: white;
         }
+
+        #footer_text{
+                text-align: right;
+            }
 
         .nav-item:after {
             content: '';
@@ -196,6 +189,22 @@
         .nav-item:hover:after {
             width: 100%;
         }
+
+        @media (max-width: 992px) {
+
+            .banner {
+                height: 100vh;
+            }
+
+            .sticky-top {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1020;
+            }
+        }
+
 
         @media (max-width: 1200px) {
             .mountaintop {
@@ -227,6 +236,9 @@
 
             .text {
                 font-size: 15px;
+            }
+            .footer_text, #footer_text{
+                text-align: center;
             }
         }
     </style>
@@ -311,7 +323,7 @@
                 <p>搭計程車 約30min<br>
                     火車 > 公車 約50min</p>
                 <h2>預約包車</h2>
-                <p class="textcolor">P:+886-4-35027888<br>
+                <p>P:+886-4-35027888<br>
                     E-mail:hwafutourbus@gmail.com<br>
                     Line:kf024606</p>
                 <h2 class="textcolor">高速公路</h2>
@@ -326,12 +338,12 @@
     <footer class=" footer">
         <div class="container">
             <div class="row  pt-4">
-                <div class="col-6 ">
+                <div class="col-12 col-md-6 col-xl-6 footer_text">
                     <span>專線 | Tel 0987-816726<br>
                         信箱 | Mail morilife520@gmail.com<br>
                         地址 | Add 台中市新社區永源里井南街28號</span>
                 </div>
-                <div class="col-6 text-right">
+                <div class="col-12 col-md-6 col-xl-6 footer_text" id="footer_text">
                     <span>寵物友善<br>
                         親子友善<br>
                         check in: 4:00<br>
