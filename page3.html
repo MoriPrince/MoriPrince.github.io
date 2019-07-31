@@ -25,7 +25,7 @@
         }
 
         .banner {
-            width: 100vw;
+            width: 100%;
             height: calc(100vh - 80px);
             background-image: url(/pic/wedding/婚禮.jpg);
             background-position: bottom;
@@ -33,16 +33,6 @@
             background-attachment: fixed;
         }
 
-        @media (max-width: 992px) {
-
-            .sticky-top {
-                position: fixed;
-                top: 0;
-                right: 0;
-                left: 0;
-                z-index: 1020;
-            }
-        }
 
         .main {
             position: relative;
@@ -128,6 +118,21 @@
             width: 100%;
         }
 
+        @media (max-width: 992px) {
+
+            .banner {
+                height: 100vh;
+            }
+
+            .sticky-top {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1020;
+            }
+        }
+
         @media (max-width: 1200px) {
             .mountaintop {
                 bottom: -75px;
@@ -138,7 +143,8 @@
             .mountaintop {
                 bottom: -40px;
             }
-        }   
+        }
+
         .swiper-button-next {
             background-image: url('/pic/arrow.svg');
         }

@@ -23,7 +23,7 @@
         }
 
         .banner {
-            width: 100vw;
+            width: 100%;
             height: calc(100vh - 56px);
             background-image: url(pic/草地.jpg);
             background-size: cover;
@@ -56,17 +56,6 @@
             width: 100%;
             height: 100vh;
             z-index: -1;
-        }
-
-        @media (max-width: 992px) {
-
-            .sticky-top {
-                position: fixed;
-                top: 0;
-                right: 0;
-                left: 0;
-                z-index: 1020;
-            }
         }
 
         .title {
@@ -151,7 +140,7 @@
             margin-top: 4vh;
             color: white;
         }
-           
+
 
 
         .content_text {
@@ -196,6 +185,22 @@
         .nav-item:hover:after {
             width: 100%;
         }
+
+        @media (max-width: 992px) {
+
+            .banner {
+                height: 100vh;
+            }
+
+            .sticky-top {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1020;
+            }
+        }
+
 
         @media (max-width: 1200px) {
             .mountaintop {
