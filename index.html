@@ -19,6 +19,12 @@
             font-family: 'Noto Sans TC';
             /* outline: 1px solid red; */
         }
+
+        
+        html{
+            scroll-behavior: smooth;
+        }
+
         a{
             text-decoration: none;
             color: white;
@@ -36,6 +42,17 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+        }
+
+        .back_to_top{
+            width: 100px;
+            height: 100px;
+            z-index: 10000;
+            background-image: url("/pic/arrow-01.png");
+            position: fixed;
+            right: 20vh;
+            top: 70vh;
+            background-size: cover;
         }
 
         .container {
@@ -312,6 +329,10 @@
     </nav>
 
     <section class="main">
+        <a href="#video">
+            <div class="back_to_top">
+            </div>
+        </a>
         <div class="background">
             <div class="mountaintop" data-paroller-factor="0.2"></div>
             <div class="mountainbtm"></div>
