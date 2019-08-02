@@ -18,6 +18,10 @@
             font-family: 'Noto Sans TC';
         }
 
+        html{
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #F2E0C9;
         }
@@ -65,16 +69,24 @@
             z-index: -1;
         }
 
-
-
+        .back_to_top{
+            width: 100px;
+            height: 100px;
+            z-index: 10000;
+            background-image: url("/pic/arrow-01.png");
+            position: fixed;
+            right: 20vh;
+            top: 70vh;
+            background-size: cover;
+        }
 
         .block {
             position: relative;
-            margin-bottom: 80px;
+            margin-bottom: 100px;
         }
 
         .block:nth-child(1) {
-            margin-top: 30px;
+            margin-top: 50px;
         }
 
         .block .bg-img {
@@ -158,7 +170,7 @@
 
         .text .btn {
             display: block;
-            margin-left: auto;
+            margin: 0 auto;
         }
 
 
@@ -188,7 +200,8 @@
         .gallery-thumbs {
             height: 35%;
             box-sizing: border-box;
-            padding: 20px 0;
+            padding-top: 30px;
+            padding-bottom: 50px;
         }
 
         .gallery-thumbs .swiper-slide {
@@ -326,11 +339,15 @@
 
 
     <section class="main">
+        <a href="#room_top">
+            <div class="back_to_top">
+            </div>
+        </a>
         <div class="background">
             <div class="mountaintop" data-paroller-factor="0.2"></div>
             <div class="mountainbtm"></div>
         </div>
-        <div class="container">
+        <div class="container" id="room_top">
             <div class="row block" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">
                 <div class="col-12 col-xl-8 block_left">
                     <div class="bg-img" style="background-image: url(pic/resort_room.jpg);"></div>
@@ -471,7 +488,7 @@
 
     <footer class=" footer">
         <div class="container">
-            <div class="row pt-4">
+            <div class="row align-items-end">
                 <div class="col-6 ">
                     <p>專線 | Tel 0987-816726<br>
                         信箱 | Mail morilife520@gmail.com<br>
@@ -492,18 +509,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="jquery.paroller.min.js"></script>
 
     <script>
-
         AOS.init();
 
         $(".nav-item").click(function () {

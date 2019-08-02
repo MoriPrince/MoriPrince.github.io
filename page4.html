@@ -18,6 +18,11 @@
             font-family: 'Noto Sans TC';
         }
 
+        
+        html{
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #F2E0C9;
         }
@@ -33,6 +38,18 @@
         .navbar {
             background-color: #736C49;
         }
+
+        .back_to_top{
+            width: 100px;
+            height: 100px;
+            z-index: 10000;
+            background-image: url("/pic/arrow-01.png");
+            position: fixed;
+            right: 20vh;
+            top: 70vh;
+            background-size: cover;
+        }
+
         .container {
             overflow: hidden;
         }
@@ -179,9 +196,9 @@
             color: white;
         }
 
-        #footer_text{
-                text-align: right;
-            }
+        #footer_text {
+            text-align: right;
+        }
 
         .nav-item:after {
             content: '';
@@ -217,6 +234,7 @@
                 bottom: -75px;
             }
         }
+
         @media (max-width: 767px) {
             .mountaintop {
                 bottom: -40px;
@@ -242,11 +260,12 @@
             .text {
                 font-size: 15px;
             }
-            .footer_text, #footer_text{
+
+            .footer_text,
+            #footer_text {
                 text-align: center;
             }
         }
-        
     </style>
 </head>
 
@@ -278,11 +297,15 @@
 
 
     <section class="main">
+        <a href="#scenery_top">
+            <div class="back_to_top">
+            </div>
+        </a>
         <div class="background">
             <div class="mountaintop" data-paroller-factor="0.2"></div>
             <div class="mountainbtm"></div>
         </div>
-        <div class="container">
+        <div class="container" id="scenery_top">
             <h1 class="title">周邊景點</h1>
             <div class="row content">
                 <div class="col-2 col-md-2 col-xl-2"></div>
@@ -343,7 +366,7 @@
 
     <footer class=" footer">
         <div class="container">
-            <div class="row  pt-4">
+            <div class="row align-items-end">
                 <div class="col-12 col-md-6 col-xl-6 footer_text">
                     <span>專線 | Tel 0987-816726<br>
                         信箱 | Mail morilife520@gmail.com<br>
@@ -364,11 +387,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 
