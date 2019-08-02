@@ -12,13 +12,16 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-
         @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
         * {
             margin: 0 auto;
             font-family: 'Noto Sans TC';
             /* outline: 1px solid red; */
+        }
+        a{
+            text-decoration: none;
+            color: white;
         }
 
         body {
@@ -293,16 +296,16 @@
             </button>
             <div class="row collapse navbar-collapse " id="navbarNav">
                 <div class="col-12 col-lg-3 navbar-nav justify-content-center">
-                    <a class="nav-item nav-link " href="/index.html">關於我們</a>
+                    <a class="nav-item nav-link " href="#video">關於我們</a>
                 </div>
                 <div class="col-12 col-lg-3 navbar-nav justify-content-center">
-                    <a class="nav-item nav-link" href="/page2.html">客房介紹</a>
+                    <a class="nav-item nav-link" href="#guest_room">客房介紹</a>
                 </div>
                 <div class="col-12 col-lg-3 navbar-nav justify-content-center">
-                    <a class="nav-item nav-link" href="/page3.html">場地介紹</a>
+                    <a class="nav-item nav-link" href="#photo_album">場地介紹</a>
                 </div>
                 <div class="col-12 col-lg-3 navbar-nav justify-content-center">
-                    <a class="nav-item nav-link" href="/page4.html">景點與交通</a>
+                    <a class="nav-item nav-link" href="#scenery">景點與交通</a>
                 </div>
             </div>
         </div>
@@ -313,7 +316,7 @@
             <div class="mountaintop" data-paroller-factor="0.2"></div>
             <div class="mountainbtm"></div>
         </div>
-        <div class="container">
+        <div class="container" id="video">
             <div class="row pb-3 pt-3">
 
                 <div class="about_us col-12 pl-0 pr-0">
@@ -337,36 +340,43 @@
                     </div>
                 </div>
             </div>
-            <div class="row pb-3" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="linear">
+            <div id="guest_room" class="row pb-3" data-aos="fade-right" data-aos-duration="2000"
+                data-aos-easing="linear">
                 <div class="content col-12 pl-0 pr-0" id="guestRoom">
-                    <div class="black"></div>
-                    <div class="content_text guest_room">
-                        <span>Guest Room</span>
-                        <h1>客房介紹</h1>
-                    </div>
-
+                    <a href="/page2.html">
+                        <div class="black"></div>
+                        <div class="content_text guest_room">
+                            <span>Guest Room</span>
+                            <h1>客房介紹</h1>
+                        </div>
+                    </a>
                 </div>
             </div>
 
-            <div class="row pb-3" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="linear">
+            <div id="photo_album" class="row pb-3" data-aos="fade-left" data-aos-duration="1500"
+                data-aos-easing="linear">
                 <div class="content col-12 pl-0 pr-0" id="food">
-                    <div class="black">
-                        <div class="content_text">
-                            <span>Photo Album</span>
-                            <h1>相簿寫真</h1>
+                    <a href="/page3.html">
+                        <div class="black">
+                            <div class="content_text">
+                                <span>Photo Album</span>
+                                <h1>相簿寫真</h1>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
-            <div class="row pb-3" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
+            <div id="scenery" class="row pb-3" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
                 <div class="content col-12 pl-0 pr-0" id="scene">
-                    <div class="black">
-                        <div class="content_text">
-                            <span>Scenery</span>
-                            <h1>好玩景點</h1>
+                    <a href="/page4.html">
+                        <div class="black">
+                            <div class="content_text">
+                                <span>Scenery</span>
+                                <h1>好玩景點</h1>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -443,10 +453,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="jquery.paroller.min.js"></script>
