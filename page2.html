@@ -69,14 +69,14 @@
             z-index: -1;
         }
 
-        .back_to_top.show {
-            width: 100px;
-            height: 100px;
+        .back_to_top.show{
+            width: 50px;
+            height: 50px;
             z-index: 10000;
             background-image: url("/pic/arrow-01.png");
             position: fixed;
             right: 10vh;
-            top: 70vh;
+            bottom: 50px;
             background-size: cover;
         }
 
@@ -218,6 +218,11 @@
             color: white;
         }
 
+        
+        #footer_text {
+            text-align: right;
+        }
+
         .block_left .bg-img:hover {
             transform: scale(1.02, 1.02);
         }
@@ -300,6 +305,10 @@
             .mountaintop {
                 bottom: -75px;
             }
+            
+            .back_to_top.show{
+                display: none;
+            }
         }
 
 
@@ -307,7 +316,10 @@
             .mountaintop {
                 bottom: -40px;
             }
-
+            .footer_text,
+            #footer_text {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -490,16 +502,16 @@
     <footer class=" footer">
         <div class="container">
             <div class="row align-items-end">
-                <div class="col-6 ">
-                    <p>專線 | Tel 0987-816726<br>
+                <div class="col-12 col-md-6 col-xl-6 footer_text">
+                    <span>專線 | Tel 0987-816726<br>
                         信箱 | Mail morilife520@gmail.com<br>
-                        地址 | Add 台中市新社區永源里井南街28號</p>
+                        地址 | Add 台中市新社區永源里井南街28號</span>
                 </div>
-                <div class="col-6 text-right">
-                    <p>寵物友善<br>
+                <div class="col-12 col-md-6 col-xl-6 footer_text" id="footer_text">
+                    <span>寵物友善<br>
                         親子友善<br>
                         check in: 4:00<br>
-                        check out: 11:00 </p>
+                        check out: 11:00 </span>
                 </div>
                 <div class="col-12 text-center">
                     <p>僅供學習使用，如有侵權，請來電告知刪除</p>
