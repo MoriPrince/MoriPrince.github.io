@@ -20,12 +20,12 @@
             /* outline: 1px solid red; */
         }
 
-        
-        html{
+
+        html {
             scroll-behavior: smooth;
         }
 
-        a{
+        a {
             text-decoration: none;
             color: white;
         }
@@ -43,16 +43,17 @@
             background-attachment: fixed;
         }
 
-        .navbar{
+        .navbar {
             background-color: #736C49;
         }
-        .back_to_top{
+
+        .back_to_top.show{
             width: 100px;
             height: 100px;
             z-index: 10000;
             background-image: url("/pic/arrow-01.png");
             position: fixed;
-            right: 20vh;
+            right: 10vh;
             top: 70vh;
             background-size: cover;
         }
@@ -473,10 +474,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="jquery.paroller.min.js"></script>
@@ -489,6 +490,25 @@
 
 
         $('.mountaintop').paroller();
+
+
+         $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            console.log(scrollTop);
+
+            if (scrollTop > 500) {
+                $(".back_to_top").addClass("show");
+            } else {
+                $(".back_to_top").removeClass("show");
+            };
+        });
+
+        $(".back_to_top").click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        })
+        
     </script>
 </body>
 
