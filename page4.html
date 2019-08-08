@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    
     <style>
         @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
@@ -34,8 +36,17 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            display: flex;
         }
-
+        
+        .banner p{
+            font-size: 120px;
+            font-family: 'Zhi Mang Xing', cursive;
+            text-align: center;
+            align-self: center;
+            color: white;
+            text-shadow:5px 5px #680E01
+        }
         .navbar {
             background-color: #736C49;
         }
@@ -187,6 +198,11 @@
             line-height: 30px;
         }
 
+        .footer p:nth-last-child(1){
+            letter-spacing: 0;
+            line-height: 24px;
+        }
+
         .textcolor {
             color: white;
             text-shadow: 0.5px 0.5px black;
@@ -200,7 +216,9 @@
         #footer_text {
             text-align: right;
         }
-
+        .nav-link{
+            text-align: center;
+        }
         .nav-item:after {
             content: '';
             display: block;
@@ -269,12 +287,17 @@
             #footer_text {
                 text-align: center;
             }
+            .banner p{
+                font-size: 80px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <section class="banner animated zoomIn slower"></section>
+    <section class="banner animated zoomIn slower">
+        <p>森之王子</p>
+    </section>
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
