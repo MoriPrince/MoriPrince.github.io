@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
     <style>
         @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
@@ -18,7 +19,7 @@
             font-family: 'Noto Sans TC';
         }
 
-        html{
+        html {
             scroll-behavior: smooth;
         }
 
@@ -33,8 +34,17 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            display: flex;
         }
-
+        .banner p{
+            font-size: 120px;
+            font-family: 'Zhi Mang Xing', cursive;
+            text-align: center;
+            align-self: center;
+            margin: 0 auto;
+            color: white;
+            text-shadow:5px 5px #680E01
+        }
         .navbar {
             background-color: #736C49;
         }
@@ -69,14 +79,14 @@
             z-index: -1;
         }
 
-        .back_to_top{
-            width: 100px;
-            height: 100px;
+        .back_to_top.show{
+            width: 50px;
+            height: 50px;
             z-index: 10000;
             background-image: url("/pic/arrow-01.png");
             position: fixed;
-            right: 20vh;
-            top: 70vh;
+            right: 10vh;
+            bottom: 50px;
             background-size: cover;
         }
 
@@ -218,10 +228,17 @@
             color: white;
         }
 
+        
+        #footer_text {
+            text-align: right;
+        }
+
         .block_left .bg-img:hover {
             transform: scale(1.02, 1.02);
         }
-
+        .nav-link{
+            text-align: center;
+        }
         .nav-item:after {
             content: '';
             display: block;
@@ -300,6 +317,10 @@
             .mountaintop {
                 bottom: -75px;
             }
+            
+            .back_to_top.show{
+                display: none;
+            }
         }
 
 
@@ -307,12 +328,21 @@
             .mountaintop {
                 bottom: -40px;
             }
+            .footer_text,
+            #footer_text {
+                text-align: center;
+            }
+            .banner p{
+                font-size: 80px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <section class="banner animated zoomIn slower"></section>
+    <section class="banner animated zoomIn slower">
+        <p>森之王子</p>
+    </section>
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
@@ -489,16 +519,16 @@
     <footer class=" footer">
         <div class="container">
             <div class="row align-items-end">
-                <div class="col-6 ">
-                    <p>專線 | Tel 0987-816726<br>
+                <div class="col-12 col-md-6 col-xl-6 footer_text">
+                    <span>專線 | Tel 0987-816726<br>
                         信箱 | Mail morilife520@gmail.com<br>
-                        地址 | Add 台中市新社區永源里井南街28號</p>
+                        地址 | Add 台中市新社區永源里井南街28號</span>
                 </div>
-                <div class="col-6 text-right">
-                    <p>寵物友善<br>
+                <div class="col-12 col-md-6 col-xl-6 footer_text" id="footer_text">
+                    <span>寵物友善<br>
                         親子友善<br>
                         check in: 4:00<br>
-                        check out: 11:00 </p>
+                        check out: 11:00 </span>
                 </div>
                 <div class="col-12 text-center">
                     <p>僅供學習使用，如有侵權，請來電告知刪除</p>
@@ -510,10 +540,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-    </script>
+        </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -554,8 +584,25 @@
             }
         );
 
-
         $('.mountaintop').paroller();
+
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            console.log(scrollTop);
+
+            if (scrollTop > 500) {
+                $(".back_to_top").addClass("show");
+            } else {
+                $(".back_to_top").removeClass("show");
+            };
+        });
+
+        $(".back_to_top").click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        })
     </script>
 </body>
 
